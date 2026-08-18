@@ -1,42 +1,43 @@
-<h1 align="center">🤖 Rule-Based Chatbot</h1>
+<h1 align="center">🚀 LLM-Powered Conversational AI Bot</h1>
 
 <p align="center">
-  A beginner-friendly Python chatbot powered by simple keyword matching.
+  An advanced AI chatbot built with Groq, Streamlit, multi-turn memory, and tool calling.
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=900&color=0E75B6&center=true&vCenter=true&width=600&lines=Python+Rule-Based+Chatbot;Keyword+Matching+%7C+Random+Replies;No+APIs+%7C+No+External+Libraries" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2500&pause=900&color=0E75B6&center=true&vCenter=true&width=750&lines=LLM-Powered+Conversational+AI;Groq+%7C+Streamlit+%7C+Tool+Calling;Memory+Enabled+AI+Assistant;Fast%2C+Natural%2C+Context-Aware+Responses" alt="Typing SVG" />
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3" />
-  <img src="https://img.shields.io/badge/Type-Beginner%20Project-22C55E?style=for-the-badge" alt="Beginner Project" />
-  <img src="https://img.shields.io/badge/Dependencies-None-F59E0B?style=for-the-badge" alt="No Dependencies" />
+  <img src="https://img.shields.io/badge/Python-3.x-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/Streamlit-Web%20UI-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit" />
+  <img src="https://img.shields.io/badge/Groq-LLM%20Inference-F55036?style=for-the-badge" alt="Groq" />
+  <img src="https://img.shields.io/badge/Level-Advanced-8B5CF6?style=for-the-badge" alt="Advanced Project" />
 </p>
 
 <br/>
 
 ## ✨ About the Project
 
-This is a simple **rule-based chatbot** made with Python. It responds to users by identifying keywords in their messages and selecting a suitable random reply.
+This project is an advanced conversational AI chatbot powered by the **Groq API**. It uses a real Large Language Model to create natural, context-aware responses while remembering previous messages in the conversation.
 
-It is designed as a beginner project to demonstrate Python dictionaries, functions, loops, conditions, user input, and the `random` module.
+The chatbot also supports **tool calling**, allowing the AI to safely perform calculations and retrieve the current date and time.
 
 <br/>
 
 ## 🚀 Features
 
-- 👋 Greetings and farewells
-- 💬 “How are you?” conversations
-- 🤖 Bot name, age, and creator questions
-- 🙋 User-name responses
-- 🆘 Help and thank-you messages
-- 😊 Good and bad mood replies
-- 😂 Random programming jokes
-- 🎲 Randomized responses
-- ❓ Fallback response for unknown messages
-- 🚪 Clean exit using `bye`, `goodbye`, `exit`, or `quit`
-- 📊 Session summary with total messages exchanged
+- 🧠 **LLM-powered responses** using Groq
+- 💬 **Multi-turn conversation memory**
+- 🧮 **Safe calculator tool** using Python's `ast` module
+- 🕒 **Real-time date and time lookup**
+- 🔧 **AI tool/function calling**
+- ⚠️ Friendly handling for API errors, rate limits, bad keys, and timeouts
+- 🎨 Polished Streamlit user interface
+- 📊 Live sidebar statistics for messages and tool calls
+- 🔄 Groq model switcher
+- ⚡ One-click quick-start prompts
+- ☁️ Ready for deployment on Streamlit Community Cloud
 
 <br/>
 
@@ -44,7 +45,9 @@ It is designed as a beginner project to demonstrate Python dictionaries, functio
 
 <p align="left">
   <img src="https://skillicons.dev/icons?i=python" alt="Python" />
-  <img src="https://img.shields.io/badge/Standard%20Library-random-3776AB?style=flat-square&logo=python&logoColor=white" height="48" alt="Random module" />
+  <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=flat-square&logo=streamlit&logoColor=white" height="48" alt="Streamlit" />
+  <img src="https://img.shields.io/badge/Groq-LLM%20API-F55036?style=flat-square" height="48" alt="Groq API" />
+  <img src="https://img.shields.io/badge/python--dotenv-Environment%20Variables-3776AB?style=flat-square&logo=python&logoColor=white" height="48" alt="python-dotenv" />
 </p>
 
 <br/>
@@ -52,10 +55,13 @@ It is designed as a beginner project to demonstrate Python dictionaries, functio
 ## 📁 Project Structure
 
 ```text
-rule-based-chatbot/
+llm-chatbot/
 │
-├── chatbot_beginner.py
+├── app.py              # Streamlit UI, LLM logic, and error handling
+├── tools.py            # Calculator and date/time tools
 ├── requirements.txt
+├── .env.example        # API key template
+├── .gitignore          # Prevents .env and venv files from being pushed
 └── README.md
 ```
 
@@ -63,75 +69,133 @@ rule-based-chatbot/
 
 ## ▶️ Getting Started
 
-### 1. Clone the repository
+### 1. Clone the Repository
 
 ```bash
 git clone <your-repository-url>
-cd rule-based-chatbot
+cd llm-chatbot
 ```
 
-### 2. Run the chatbot
+### 2. Create a Virtual Environment
 
 ```bash
-python chatbot_beginner.py
+python -m venv venv
 ```
 
-> Python 3 is required. No external packages need to be installed.
+Activate it:
+
+```bash
+# Windows
+venv\Scripts\activate
+```
+
+```bash
+# macOS / Linux
+source venv/bin/activate
+```
+
+### 3. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Add Your Groq API Key
+
+Copy `.env.example` and rename it to `.env`.
+
+```env
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+Get your API key from [Groq Console](https://console.groq.com/).
+
+### 5. Run the Application
+
+```bash
+streamlit run app.py
+```
+
+The app will open in your browser at:
+
+```text
+http://localhost:8501
+```
 
 <br/>
 
-## 💬 Example Conversation
+## 💬 Example Usage
 
-```text
-ChatBuddy: Hello! Type 'help' for ideas or 'bye' to exit.
-
-You: hi
-ChatBuddy: Hi! Nice to hear from you.
-
-You: what's your name
-ChatBuddy: I'm ChatBuddy, your friendly rule-based chatbot.
-
-You: tell me a joke
-ChatBuddy: Why do programmers prefer dark mode? Because light attracts bugs!
-
-You: bye
-ChatBuddy: Goodbye! Have a great day.
-
-(Session summary: you sent 4 message(s). Goodbye!)
-```
+| User Prompt | What Happens |
+|---|---|
+| `Hi, who are you?` | The chatbot starts a normal AI conversation. |
+| `What's 4562 × 17?` | The AI calls the safe calculator tool. |
+| `What's today's date?` | The AI calls the date/time tool. |
+| `Tell me a joke about Python.` | The LLM generates a natural response. |
+| `Remember that my name is Ali.` | The bot retains this context during the session. |
 
 <br/>
 
 ## ⚙️ How It Works
 
 ```text
-User Input
-    ↓
-Convert text to lowercase
-    ↓
-Match input with keywords
-    ↓
-Select a random response
-    ↓
-Display reply or fallback message
+User Message
+     ↓
+Streamlit Session Memory
+     ↓
+Groq LLM API + Tool Schemas
+     ↓
+Does the AI need a tool?
+     ↓
+ ┌───────────────┴────────────────┐
+ ↓                                ↓
+No tool needed                 Tool requested
+ ↓                                ↓
+AI response                   Run local Python tool
+ ↓                                ↓
+Display answer              Send result back to AI
+                                  ↓
+                            Display natural answer
 ```
 
-1. `KEYWORDS` stores topics and trigger words.
-2. `RESPONSES` stores multiple replies for every topic.
-3. The chatbot checks the user's message for matching keywords.
-4. `random.choice()` selects a different response when possible.
-5. The chat ends when an exit keyword is detected.
+1. Every user message is saved in `st.session_state.messages`.
+2. The full conversation history is sent to Groq on every turn.
+3. The LLM decides whether it needs a calculator or date/time tool.
+4. When a tool is needed, Python runs it locally and safely.
+5. The result is returned to the LLM for a natural-language response.
+6. Streamlit displays the conversation, statistics, and tool badges.
 
 <br/>
 
-## 📚 Learning Concepts
+## 🔐 Security Notes
 
-- Python dictionaries
-- Lists
-- Functions
-- `while` loops
-- `if / elif / else` conditions
-- User input with `input()`
-- Random responses using `random.choice()`
+- The calculator does **not** use Python's `eval()`.
+- Expressions are parsed through Python's `ast` module.
+- Only approved arithmetic operations are allowed.
+- Your API key is stored in `.env`, which should never be uploaded to GitHub.
+- The `.gitignore` file protects `.env` and virtual-environment files.
+
+<br/>
+
+## ☁️ Deployment on Streamlit Community Cloud
+
+1. Push this project to GitHub.
+2. Visit [Streamlit Community Cloud](https://share.streamlit.io).
+3. Sign in using GitHub.
+4. Click **New app**.
+5. Select your repository, branch, and set `app.py` as the main file.
+6. In **Advanced settings → Secrets**, add:
+
+```toml
+GROQ_API_KEY = "your_real_groq_api_key_here"
+```
+
+7. Click **Deploy**.
+
+Your application will receive a public URL similar to:
+
+```text
+https://your-app-name.streamlit.app
+```
 
 <br/>
